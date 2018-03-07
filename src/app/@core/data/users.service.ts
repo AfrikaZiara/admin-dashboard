@@ -2,10 +2,13 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 
+
 let counter = 0;
 
 @Injectable()
 export class UserService {
+
+  systemUsers$;
 
   private users = {
     nick: { name: 'Nick Jones', picture: 'assets/images/nick.png' },
@@ -19,8 +22,9 @@ export class UserService {
   private userArray: any[];
 
   constructor() {
-    // this.userArray = Object.values(this.users);
+    
   }
+
 
   getUsers(): Observable<any> {
     return Observable.of(this.users);

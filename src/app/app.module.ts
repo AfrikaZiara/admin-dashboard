@@ -1,3 +1,5 @@
+import { environment } from './../environments/environment';
+import { AngularFireDatabase } from 'angularfire2/database';
 /**
  * @license
  * Copyright Akveo. All Rights Reserved.
@@ -15,6 +17,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { ThemeModule } from './@theme/theme.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -22,7 +28,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
-
+    AngularFireModule.initializeApp( environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
     NgbModule.forRoot(),
     ThemeModule.forRoot(),
     CoreModule.forRoot(),
