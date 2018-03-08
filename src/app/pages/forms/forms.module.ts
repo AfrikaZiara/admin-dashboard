@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { ThemeModule } from '../../@theme/theme.module';
 import { FormsRoutingModule, routedComponents } from './forms-routing.module';
 import { TourOperatorComponent } from './tour-operator/tour-operator.component';
-import { TourPackageComponent } from './tour-package/tour-package.component';
+import { FormTourPackageComponent } from './form-tour-package/form-tour-package.component';
 
 @NgModule({
   imports: [
@@ -13,7 +13,7 @@ import { TourPackageComponent } from './tour-package/tour-package.component';
   declarations: [
     ...routedComponents,
     TourOperatorComponent,
-    TourPackageComponent,
+    FormTourPackageComponent,
   ],
 })
 export class FormsModule { }

@@ -76,7 +76,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     children: [
       {
         title: 'Add Tour Packages',
-        link: '/pages/forms/tour-package',
+        link: '/pages/forms/form-tour-package',
       },
       {
         title: 'Manage Packages',

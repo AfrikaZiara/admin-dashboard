@@ -18,6 +18,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { TourOperatorsService } from './@core/data/tour-operators.service';
+import { FormTourPackageComponent } from './pages/forms/form-tour-package/form-tour-package.component';
+import { AdminTourPackagesService } from './@core/data/admin-tour-packages.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -36,7 +38,8 @@ import { TourOperatorsService } from './@core/data/tour-operators.service';
   bootstrap: [AppComponent],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' },
-    TourOperatorsService
+    TourOperatorsService,
+    AdminTourPackagesService
   ],
 })
 export class AppModule {
