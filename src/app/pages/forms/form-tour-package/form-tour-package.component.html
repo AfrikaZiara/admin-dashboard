@@ -1,0 +1,66 @@
+<div class="row">
+    <div class="col-lg-7">
+      <nb-card>
+        <nb-card-header>Add Tour Package</nb-card-header>
+        <nb-card-body>
+          <form #f="ngForm" (ngSubmit)="addTourPackage(f.value)">
+            <div class="input-group has-person-icon">
+              <input #title="ngModel" ngModel name="title" type="text" placeholder="Title" class="form-control" required/>
+            </div>
+  
+            <div class="row full-name-inputs">
+              <div class="col-sm-6 input-group">
+                  <select #category="ngModel" ngModel name="category" class="form-control" required>
+                    <option ng-selected="selected">Select Category</option>
+                    <option>Adventure</option>
+                    <option>Nightlife</option>
+                    <option>Relaxation</option>
+                    <option>Adrenaline</option>
+                    <option>Safari</option>
+                  </select>
+              </div>
+              <div class="col-sm-6 input-group">
+                  <div class="input-group has-person-icon">
+                    <input #price="ngModel" ngModel name="price" type="text" placeholder="Price" class="form-control" required/>
+                  </div>
+              </div>
+            </div>
+
+            <div class="input-group has-person-icon">
+                <input #destination="ngModel" ngModel name="destination" type="text" placeholder="Destination" class="form-control" required/>
+            </div>
+  
+            <div class="input-group">
+                <textarea ngModel name="description" rows="5" placeholder="Brief Description" class="form-control" required></textarea>
+            </div>
+
+            <div class="input-group">
+                <textarea ngModel name="itinerary" rows="7" placeholder="Itinerary" class="form-control" required></textarea>
+            </div>
+  
+            <div class="input-group has-person-icon">
+                <input #imageUrl="ngModel" ngModel name="imageUrl" type="text" placeholder="Featured Image Url" class="form-control" required/>
+            </div>
+            <button type="submit" class="btn btn-hero-success main-btn">
+                <i class="ion ion-globe"></i> Save
+            </button>
+          </form>
+        </nb-card-body>
+      </nb-card>
+    </div>
+    <div class="col-lg-5">
+        <nb-card  *ngIf="title.value">
+          <img class="card-img-top" [src]="imageUrl.value"  style="width:100%">
+          <nb-card-header>{{ title.value}}</nb-card-header>
+          <nb-card-body>
+              <div  class="input-group">
+                 {{ category.value }} {{ price.value}} 
+              </div>
+              <div  class="input-group">
+                  {{ destination.value }}
+               </div>
+          </nb-card-body>
+        </nb-card>
+    </div>
+  </div>
+  
