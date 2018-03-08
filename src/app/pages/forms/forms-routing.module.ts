@@ -1,3 +1,4 @@
+import { TourPackageComponent } from './tour-package/tour-package.component';
 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -20,6 +21,10 @@ const routes: Routes = [{
   {
     path: 'tour-operator',
     component: TourOperatorComponent,
+  },
+  {
+    path: 'tour-package',
+    component: TourPackageComponent,
   }],
 }];
 

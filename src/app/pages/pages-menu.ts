@@ -64,6 +64,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'nb-compose',
     children: [
       {
+        title: 'Add Tour Packages',
+        link: '/pages/forms/tour-package',
+      },
+      {
         title: 'Manage Packages',
         link: '/pages/tables/smart-table',
       },
@@ -157,6 +161,36 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Reset Password',
         link: '/auth/reset-password',
+      },
+    ],
+  },
+  {
+    title: 'UI Components',
+    icon: 'nb-locked',
+    children: [
+      {
+        title: 'Forms',
+        link: '/pages/forms/inputs',
+      },
+      {
+        title: 'Buttons',
+        link: '/pages/ui-features/buttons',
+      },
+      {
+        title: 'Grid',
+        link: '/pages/ui-features/grid',
+      },
+      {
+        title: 'Icons',
+        link: '/pages/ui-features/icons',
+      },
+      {
+        title: 'Modals',
+        link: '/pages/ui-features/modals',
+      },
+      {
+        title: 'Popovers',
+        link: '/pages/ui-features/popovers',
       },
     ],
   },
