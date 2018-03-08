@@ -7,6 +7,7 @@ import { TableTourOperatorsComponent } from './table-tour-operators/table-tour-o
 import { TableTouristsComponent } from './table-tourists/table-tourists.component';
 import { TableTourBookingsComponent } from './table-tour-bookings/table-tour-bookings.component';
 import { TableTourPackagesComponent } from './table-tour-packages/table-tour-packages.component';
+import { TableUsersComponent } from './table-users/table-users.component';
 
 const routes: Routes = [{
   path: '',
@@ -31,6 +32,11 @@ const routes: Routes = [{
     path: 'table-tour-packages',
     component: TableTourPackagesComponent,
   }
+  ,
+  {
+    path: 'table-users',
+    component: TableUsersComponent,
+  }
 ],
 }];
 
@@ -46,5 +52,6 @@ export const routedComponents = [
   TableTourOperatorsComponent,
   TableTouristsComponent,
   TableTourBookingsComponent,
-  TableTourPackagesComponent
+  TableTourPackagesComponent,
+  TableUsersComponent
 ];

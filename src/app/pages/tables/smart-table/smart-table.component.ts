@@ -53,7 +53,6 @@ export class SmartTableComponent {
   users$;
 
   constructor(private service: SmartTableService) {
-    //load data from db
     this.users$ =  this.service.getDataFromDb()
 
   }

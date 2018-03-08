@@ -45,6 +45,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'nb-locked',
     children: [
       {
+        title: 'Manage Users',
+        link: '/pages/tables/table-users',
+      },
+      {
         title: 'Login',
         link: '/auth/login',
       },

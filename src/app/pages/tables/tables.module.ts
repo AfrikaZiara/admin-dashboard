@@ -1,3 +1,4 @@
+import { TourOperatorsService } from './../../@core/data/tour-operators.service';
 import { NgModule } from '@angular/core';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 
@@ -8,6 +9,7 @@ import { TableTourOperatorsComponent } from './table-tour-operators/table-tour-o
 import { TableTouristsComponent } from './table-tourists/table-tourists.component';
 import { TableTourBookingsComponent } from './table-tour-bookings/table-tour-bookings.component';
 import { TableTourPackagesComponent } from './table-tour-packages/table-tour-packages.component';
+import { TableUsersComponent } from './table-users/table-users.component';
 
 @NgModule({
   imports: [
@@ -20,11 +22,13 @@ import { TableTourPackagesComponent } from './table-tour-packages/table-tour-pac
     TableTourOperatorsComponent,
     TableTouristsComponent,
     TableTourBookingsComponent,
-    TableTourPackagesComponent
+    TableTourPackagesComponent,
+    TableUsersComponent
     
   ],
   providers: [
     SmartTableService,
+    TourOperatorsService
   ],
 })
 export class TablesModule { }
