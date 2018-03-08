@@ -1,3 +1,4 @@
+import { TourOperatorsService } from './tour-operators.service';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -22,6 +23,7 @@ const SERVICES = [
   ],
   providers: [
     ...SERVICES,
+    TourOperatorsService
     
   ],
 })

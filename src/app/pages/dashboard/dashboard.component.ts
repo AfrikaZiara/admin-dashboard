@@ -1,3 +1,4 @@
+import { UserService } from './../../@core/data/users.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,4 +7,11 @@ import { Component } from '@angular/core';
   templateUrl: './dashboard.component.html',
 })
 export class DashboardComponent {
+users$;
+
+  constructor(private userService: UserService){
+    this.users$ = this.userService.fetchUsersFromFirebase()
+
+  }
 }
+

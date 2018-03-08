@@ -1,8 +1,8 @@
 <nb-card [size]="breakpoint.width >= breakpoints.xxxl || breakpoint.width < breakpoints.md ? 'large' : 'xlarge'">
   <nb-tabset fullWidth>
     <nb-tab tabTitle="Contacts">
-      <div class="contact" *ngFor="let c of contacts">
-        <nb-user [picture]="c.user.picture" [name]="c.user.name" [title]="c.type" size="large"></nb-user>
+      <div class="contact" *ngFor="let u of users$ | async">
+        <nb-user picture="{{u.imageUrl}}" name="{{u.name}}" title="{{u.email}}" size="large"></nb-user>
         <i class="i-contact nb-phone"></i>
       </div>
     </nb-tab>
@@ -14,3 +14,7 @@
     </nb-tab>
   </nb-tabset>
 </nb-card>
+
+
+
+
