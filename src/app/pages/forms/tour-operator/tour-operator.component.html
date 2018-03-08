@@ -5,17 +5,17 @@
       <nb-card-body>
         <form #f="ngForm" (ngSubmit)="registerTourOp(f.value)">
           <div class="input-group has-person-icon">
-            <input ngModel name="name" type="text" placeholder="Tour Operator Name" class="form-control" required/>
+            <input #name="ngModel" ngModel name="name" type="text" placeholder="Tour Operator Name" class="form-control" required/>
           </div>
 
           <div class="row full-name-inputs">
             <div class="col-sm-6 input-group">
                 <div class="input-group has-person-icon">
-                  <input ngModel name="address" type="text" placeholder="Address" class="form-control" required/>
+                  <input #address="ngModel" ngModel name="address" type="text" placeholder="Address" class="form-control" required/>
                 </div>
             </div>
             <div class="col-sm-6 input-group">
-                <select ngModel name="category" class="form-control" required>
+                <select #category="ngModel" ngModel name="category" class="form-control" required>
                   <option>Select Category</option>
                   <option>Tour Operator</option>
                   <option>Travel Agent</option>
@@ -24,22 +24,22 @@
           </div>
 
           <div class="input-group">
-              <textarea ngModel name="profile" rows="5" placeholder="Business Profile" class="form-control" required></textarea>
+              <textarea #profile="ngModel" ngModel name="profile" rows="5" placeholder="Business Profile" class="form-control" required></textarea>
           </div>
 
           <div class="input-group has-person-icon">
-              <input ngModel name="phone" type="text" placeholder="Phone" class="form-control" required/>
+              <input #phone="ngModel" ngModel name="phone" type="text" placeholder="Phone" class="form-control" required/>
           </div>
 
           <div class="input-group has-person-icon">
-            <input ngModel name="email" type="text" placeholder="Email" class="form-control" required/>
+            <input  ngModel name="email" type="text" placeholder="Email" class="form-control" required/>
           </div>
 
           <div class="input-group has-person-icon">
-              <input ngModel name="websiteUrl" type="text" placeholder="Website" class="form-control" required/>
+              <input #websiteUrl="ngModel" ngModel name="websiteUrl" type="text" placeholder="Website" class="form-control" required/>
           </div>
           <div class="input-group has-person-icon">
-              <input ngModel name="logoUrl" type="text" placeholder="Logo Url" class="form-control" required/>
+              <input #logoUrl="ngModel" ngModel name="logoUrl" type="text" placeholder="Logo Url" class="form-control" required/>
           </div>
           <button type="submit" class="btn btn-hero-success main-btn">
               <i class="ion ion-globe"></i> Save
@@ -50,13 +50,20 @@
   </div>
 
   <div class="col-lg-5">
-      <nb-card>
-        <nb-card-header>Preview Card</nb-card-header>
+      <nb-card  *ngIf="name.value">
+        <img class="card-img-top" [src]="logoUrl.value"  style="width:100%">
+        <nb-card-header>{{ name.value }}</nb-card-header>
         <nb-card-body>
-        
-            <div *ngIf="name.value"  class="input-group">
-               {{ name.value }}
+            <div  class="input-group">
+               {{ category.value }}
+            </div>
+            <div  class="input-group">
+                {{ address.value }}
+            </div>
+            <div  class="input-group">
+                {{ websiteUrl.value }}
             </div>
         </nb-card-body>
       </nb-card>
+  </div>
 </div>

@@ -9,10 +9,10 @@ import { Component } from '@angular/core';
   templateUrl: './dashboard.component.html',
 })
 export class DashboardComponent {
-users$;
+//users$;
 
   constructor(private userService: UserService){
-    this.users$ = this.userService.fetchUsersFromFirebase()
+   // this.users$ = this.userService.fetchUsersFromFirebase()
 
   }
 }

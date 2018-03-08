@@ -56,4 +56,12 @@ export class TableTourOperatorsComponent {
     this.tourOperators$ = this.db.list('/tour-operators').valueChanges()
    }
 
+   onDeleteConfirm(event): void {
+    if (window.confirm('Are you sure you want to delete?')) {
+      event.confirm.resolve();
+    } else {
+      event.confirm.reject();
+    }
+  }
+
 }

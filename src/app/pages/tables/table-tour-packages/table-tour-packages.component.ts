@@ -47,6 +47,13 @@ export class TableTourPackagesComponent {
     this.tours$ = this.adminTourPackagesService.fetchAllTourPackages()
   }
 
+  onDeleteConfirm(event): void {
+    if (window.confirm('Are you sure you want to delete?')) {
+      event.confirm.resolve();
+    } else {
+      event.confirm.reject();
+    }
+  }
 
 
 }
