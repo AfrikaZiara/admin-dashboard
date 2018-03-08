@@ -30,38 +30,32 @@ export class SmartTableComponent {
       confirmDelete: true,
     },
     columns: {
-      id: {
-        title: 'ID',
-        type: 'number',
-      },
-      firstName: {
-        title: 'First Name',
-        type: 'string',
-      },
-      lastName: {
-        title: 'Last Name',
-        type: 'string',
-      },
-      username: {
-        title: 'Username',
+      name: {
+        title: 'Name',
         type: 'string',
       },
       email: {
         title: 'E-mail',
         type: 'string',
       },
-      age: {
-        title: 'Age',
-        type: 'number',
+      isAdmin: {
+        title: 'Admin',
+        type: 'boolean',
+      },
+      isTourOperator: {
+        title: 'Tour Operator',
+        type: 'boolean',
       },
     },
   };
 
   source: LocalDataSource = new LocalDataSource();
+  users$;
 
   constructor(private service: SmartTableService) {
-    const data = this.service.getData();
-    this.source.load(data);
+    //load data from db
+    this.users$ =  this.service.getDataFromDb()
+
   }
 
   onDeleteConfirm(event): void {

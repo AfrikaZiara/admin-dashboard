@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 
 import { NgxEchartsModule } from 'ngx-echarts';
@@ -45,6 +46,7 @@ import { TrafficChartComponent } from './traffic/traffic-chart.component';
     SolarComponent,
     TrafficComponent,
     TrafficChartComponent,
+
   ],
 })
 export class DashboardModule { }
