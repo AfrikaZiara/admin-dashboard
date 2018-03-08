@@ -1,15 +1,8 @@
 import { NbMenuItem } from '@nebular/theme';
 
 export const MENU_ITEMS: NbMenuItem[] = [
-
   {
-    title: 'Dashboard',
-    icon: 'nb-home',
-    link: '/pages/dashboard',
-    home: true,
-  },
-  {
-    title: 'FEATURES',
+    title: 'ADMIN ACCOUNT',
     group: true,
   },
   {
@@ -23,83 +16,28 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
       {
         title: 'Manage Tour Operators',
-        link: '/pages/tables/smart-table',
+        link: '/pages/tables/table-tour-operators',
       },
     ],
   },
   {
-    title: 'Tour Packages',
-    icon: 'nb-compose',
-    children: [
-      {
-        title: 'Add Tour Packages',
-        link: '/pages/forms/tour-package',
-      },
-      {
-        title: 'Manage Packages',
-        link: '/pages/tables/smart-table',
-      },
-    ],
-  },
-  {
-    title: 'Tourists',
+    title: 'Tourist Statistics',
     icon: 'nb-gear',
     children: [
       {
         title: 'Manage Tourists',
-        link: '/pages/tables/smart-table',
-      },
-      {
-        title: 'Tree',
-        link: '/pages/components/tree',
-      }, {
-        title: 'Notifications',
-        link: '/pages/components/notifications',
-      },
+        link: '/pages/tables/table-tourists',
+      }
     ],
   },
   {
-    title: 'Bookings',
+    title: 'Booking Statistics',
     icon: 'nb-location',
     children: [
       {
         title: 'Manage Bookings',
-        link: '/pages/tables/smart-table',
-      },
-      {
-        title: 'Google Maps',
-        link: '/pages/maps/gmaps',
-      },
-      {
-        title: 'Leaflet Maps',
-        link: '/pages/maps/leaflet',
-      },
-      {
-        title: 'Bubble Maps',
-        link: '/pages/maps/bubble',
-      },
-      {
-        title: 'Search Maps',
-        link: '/pages/maps/searchmap',
-      },
-    ],
-  },
-  {
-    title: 'Support',
-    icon: 'nb-bar-chart',
-    children: [
-      {
-        title: 'Echarts',
-        link: '/pages/charts/echarts',
-      },
-      {
-        title: 'Charts.js',
-        link: '/pages/charts/chartjs',
-      },
-      {
-        title: 'D3',
-        link: '/pages/charts/d3',
-      },
+        link: '/pages/tables/table-tour-bookings',
+      }
     ],
   },
   {
@@ -121,6 +59,42 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Reset Password',
         link: '/auth/reset-password',
+      },
+    ],
+  },
+  {
+    title: 'TOUR OPERATOR ACCOUNT',
+    group: true,
+  },
+  {
+    title: 'Tour Packages',
+    icon: 'nb-compose',
+    children: [
+      {
+        title: 'Add Tour Packages',
+        link: '/pages/forms/tour-package',
+      },
+      {
+        title: 'Manage Packages',
+        link: '/pages/tables/table-tour-packages',
+      }
+    ],
+  },
+  {
+    title: 'Support',
+    icon: 'nb-bar-chart',
+    children: [
+      {
+        title: 'Echarts',
+        link: '/pages/charts/echarts',
+      },
+      {
+        title: 'Charts.js',
+        link: '/pages/charts/chartjs',
+      },
+      {
+        title: 'D3',
+        link: '/pages/charts/d3',
       },
     ],
   },
@@ -169,6 +143,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Form Inputs',
         link: '/pages/forms/inputs',
       },
+      {
+        title:'Notifications',
+        link:'pages/components/notifications'
+      }
     ],
   },
 ];

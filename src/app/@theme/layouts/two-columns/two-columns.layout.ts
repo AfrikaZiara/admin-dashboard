@@ -13,7 +13,7 @@ import { Component } from '@angular/core';
       <nb-sidebar class="menu-sidebar" tag="menu-sidebar" responsive >
         <nb-sidebar-header>
           <a href="#" class="btn btn-hero-success main-btn">
-            <i class="ion ion-glode"></i> <span>Welcome</span>
+            <i class="ion ion-home"></i> <span>Dashboard</span>
           </a>
         </nb-sidebar-header>
         <ng-content select="nb-menu"></ng-content>
