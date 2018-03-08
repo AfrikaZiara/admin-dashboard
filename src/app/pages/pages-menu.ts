@@ -18,6 +18,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/pages/ui-features',
     children: [
       {
+        title: 'Add Tour Operator',
+        link: '/pages/forms/tour-operator',
+      },
+      {
         title: 'Manage Tour Operators',
         link: '/pages/tables/smart-table',
       },
