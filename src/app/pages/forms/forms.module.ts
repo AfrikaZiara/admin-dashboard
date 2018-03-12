@@ -4,6 +4,7 @@ import { ThemeModule } from '../../@theme/theme.module';
 import { FormsRoutingModule, routedComponents } from './forms-routing.module';
 import { TourOperatorComponent } from './tour-operator/tour-operator.component';
 import { FormTourPackageComponent } from './form-tour-package/form-tour-package.component';
+import { MultipleChanelComponent } from './multiple-chanel/multiple-chanel.component';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { FormTourPackageComponent } from './form-tour-package/form-tour-package.
     ...routedComponents,
     TourOperatorComponent,
     FormTourPackageComponent,
+    MultipleChanelComponent,
   ],
 })
 export class FormsModule { }

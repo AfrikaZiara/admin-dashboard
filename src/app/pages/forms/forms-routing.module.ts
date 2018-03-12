@@ -6,6 +6,7 @@ import { FormInputsComponent } from './form-inputs/form-inputs.component';
 import { FormLayoutsComponent } from './form-layouts/form-layouts.component';
 import { TourOperatorComponent } from './tour-operator/tour-operator.component';
 import { FormTourPackageComponent } from './form-tour-package/form-tour-package.component';
+import { MultipleChanelComponent } from './multiple-chanel/multiple-chanel.component';
 
 const routes: Routes = [{
   path: '',
@@ -24,7 +25,12 @@ const routes: Routes = [{
   {
     path: 'form-tour-package',
     component: FormTourPackageComponent,
+  },
+  {
+    path: 'multiple-chanel',
+    component: MultipleChanelComponent,
   }
+  
 
 ],
 }];

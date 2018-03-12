@@ -21,12 +21,12 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ],
   },
   {
-    title: 'Tourist Statistics',
+    title: 'Multiple Chanel',
     icon: 'nb-gear',
     children: [
       {
-        title: 'Manage Tourists',
-        link: '/pages/tables/table-tourists',
+        title: 'Manage Chanels',
+        link: '/pages/forms/multiple-chanel',
       }
     ],
   },

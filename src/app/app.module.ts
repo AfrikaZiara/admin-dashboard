@@ -20,6 +20,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { TourOperatorsService } from './@core/data/tour-operators.service';
 import { FormTourPackageComponent } from './pages/forms/form-tour-package/form-tour-package.component';
 import { AdminTourPackagesService } from './@core/data/admin-tour-packages.service';
+import { MultipleChanelService } from './@core/data/multiple-chanel.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -39,7 +40,9 @@ import { AdminTourPackagesService } from './@core/data/admin-tour-packages.servi
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' },
     TourOperatorsService,
-    AdminTourPackagesService
+    AdminTourPackagesService,
+    MultipleChanelService
+
   ],
 })
 export class AppModule {
