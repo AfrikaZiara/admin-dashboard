@@ -1,18 +1,17 @@
 <div class="row">
-  <div class="col-xxxl-3 col-md-6">
+ <!-- <div class="col-xxxl-3 col-md-6">
     <ngx-status-card title="Bookings" type="primary">
       <i class="nb-lightbulb"></i>
     </ngx-status-card>
-  </div>
-
+  </div> 
   <div class="col-xxxl-3 col-md-6">
     <ngx-status-card title="Tour Operators" type="success">
       <i class="nb-roller-shades"></i>
     </ngx-status-card>
   </div>
-
+-->
   <div class="col-xxxl-3 col-md-6">
-    <ngx-status-card title="Revenue" type="info">
+    <ngx-status-card title="Bookings" type="info">
       <i class="nb-audio"></i>
     </ngx-status-card>
   </div>
@@ -26,7 +25,13 @@
 
 <div class="row">
   <div class="col-xxxl-12 col-xxl-4 col-lg-12 col-md-6">
-    <ngx-electricity></ngx-electricity>
+    <!-- <ngx-electricity></ngx-electricity> -->
+    <nb-card>
+      <nb-card-header>Pie chart for tour bookings on defferent channels</nb-card-header>
+      <nb-card-body>
+        <ngx-echarts-pie></ngx-echarts-pie>
+      </nb-card-body>
+    </nb-card>
   </div>
 </div>
 

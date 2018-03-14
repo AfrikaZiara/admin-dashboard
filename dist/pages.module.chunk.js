@@ -94,7 +94,7 @@ var ContactsComponent = /** @class */ (function () {
 /***/ "./src/app/pages/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-xxxl-3 col-md-6\">\n    <ngx-status-card title=\"Bookings\" type=\"primary\">\n      <i class=\"nb-lightbulb\"></i>\n    </ngx-status-card>\n  </div>\n\n  <div class=\"col-xxxl-3 col-md-6\">\n    <ngx-status-card title=\"Tour Operators\" type=\"success\">\n      <i class=\"nb-roller-shades\"></i>\n    </ngx-status-card>\n  </div>\n\n  <div class=\"col-xxxl-3 col-md-6\">\n    <ngx-status-card title=\"Revenue\" type=\"info\">\n      <i class=\"nb-audio\"></i>\n    </ngx-status-card>\n  </div>\n\n  <div class=\"col-xxxl-3 col-md-6\">\n    <ngx-status-card title=\"Site Visits\" type=\"warning\">\n      <i class=\"nb-coffee-maker\"></i>\n    </ngx-status-card>\n  </div>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-xxxl-12 col-xxl-4 col-lg-12 col-md-6\">\n    <ngx-electricity></ngx-electricity>\n  </div>\n</div>\n\n\n\n\n"
+module.exports = "<div class=\"row\">\n <!-- <div class=\"col-xxxl-3 col-md-6\">\n    <ngx-status-card title=\"Bookings\" type=\"primary\">\n      <i class=\"nb-lightbulb\"></i>\n    </ngx-status-card>\n  </div> \n  <div class=\"col-xxxl-3 col-md-6\">\n    <ngx-status-card title=\"Tour Operators\" type=\"success\">\n      <i class=\"nb-roller-shades\"></i>\n    </ngx-status-card>\n  </div>\n-->\n  <div class=\"col-xxxl-3 col-md-6\">\n    <ngx-status-card title=\"Revenue\" type=\"info\">\n      <i class=\"nb-audio\"></i>\n    </ngx-status-card>\n  </div>\n\n  <div class=\"col-xxxl-3 col-md-6\">\n    <ngx-status-card title=\"Site Visits\" type=\"warning\">\n      <i class=\"nb-coffee-maker\"></i>\n    </ngx-status-card>\n  </div>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-xxxl-12 col-xxl-4 col-lg-12 col-md-6\">\n    <!-- <ngx-electricity></ngx-electricity> -->\n    <nb-card>\n      <nb-card-header>Pie chart for tour bookings on defferent channels</nb-card-header>\n      <nb-card-body>\n        <ngx-echarts-pie></ngx-echarts-pie>\n      </nb-card-body>\n    </nb-card>\n  </div>\n</div>\n\n\n\n\n"
 
 /***/ }),
 
@@ -149,26 +149,27 @@ var DashboardComponent = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ngx_echarts__ = __webpack_require__("./node_modules/ngx-echarts/ngx-echarts.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__theme_theme_module__ = __webpack_require__("./src/app/@theme/theme.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__dashboard_component__ = __webpack_require__("./src/app/pages/dashboard/dashboard.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__status_card_status_card_component__ = __webpack_require__("./src/app/pages/dashboard/status-card/status-card.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__contacts_contacts_component__ = __webpack_require__("./src/app/pages/dashboard/contacts/contacts.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__rooms_rooms_component__ = __webpack_require__("./src/app/pages/dashboard/rooms/rooms.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__rooms_room_selector_room_selector_component__ = __webpack_require__("./src/app/pages/dashboard/rooms/room-selector/room-selector.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__temperature_temperature_component__ = __webpack_require__("./src/app/pages/dashboard/temperature/temperature.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__temperature_temperature_dragger_temperature_dragger_component__ = __webpack_require__("./src/app/pages/dashboard/temperature/temperature-dragger/temperature-dragger.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__team_team_component__ = __webpack_require__("./src/app/pages/dashboard/team/team.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__kitten_kitten_component__ = __webpack_require__("./src/app/pages/dashboard/kitten/kitten.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__security_cameras_security_cameras_component__ = __webpack_require__("./src/app/pages/dashboard/security-cameras/security-cameras.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__electricity_electricity_component__ = __webpack_require__("./src/app/pages/dashboard/electricity/electricity.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__electricity_electricity_chart_electricity_chart_component__ = __webpack_require__("./src/app/pages/dashboard/electricity/electricity-chart/electricity-chart.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__weather_weather_component__ = __webpack_require__("./src/app/pages/dashboard/weather/weather.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__solar_solar_component__ = __webpack_require__("./src/app/pages/dashboard/solar/solar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__rooms_player_player_component__ = __webpack_require__("./src/app/pages/dashboard/rooms/player/player.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__traffic_traffic_component__ = __webpack_require__("./src/app/pages/dashboard/traffic/traffic.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__traffic_traffic_chart_component__ = __webpack_require__("./src/app/pages/dashboard/traffic/traffic-chart.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__charts_echarts_echarts_pie_component__ = __webpack_require__("./src/app/pages/charts/echarts/echarts-pie.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ngx_echarts__ = __webpack_require__("./node_modules/ngx-echarts/ngx-echarts.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__theme_theme_module__ = __webpack_require__("./src/app/@theme/theme.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__dashboard_component__ = __webpack_require__("./src/app/pages/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__status_card_status_card_component__ = __webpack_require__("./src/app/pages/dashboard/status-card/status-card.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__contacts_contacts_component__ = __webpack_require__("./src/app/pages/dashboard/contacts/contacts.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__rooms_rooms_component__ = __webpack_require__("./src/app/pages/dashboard/rooms/rooms.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__rooms_room_selector_room_selector_component__ = __webpack_require__("./src/app/pages/dashboard/rooms/room-selector/room-selector.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__temperature_temperature_component__ = __webpack_require__("./src/app/pages/dashboard/temperature/temperature.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__temperature_temperature_dragger_temperature_dragger_component__ = __webpack_require__("./src/app/pages/dashboard/temperature/temperature-dragger/temperature-dragger.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__team_team_component__ = __webpack_require__("./src/app/pages/dashboard/team/team.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__kitten_kitten_component__ = __webpack_require__("./src/app/pages/dashboard/kitten/kitten.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__security_cameras_security_cameras_component__ = __webpack_require__("./src/app/pages/dashboard/security-cameras/security-cameras.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__electricity_electricity_component__ = __webpack_require__("./src/app/pages/dashboard/electricity/electricity.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__electricity_electricity_chart_electricity_chart_component__ = __webpack_require__("./src/app/pages/dashboard/electricity/electricity-chart/electricity-chart.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__weather_weather_component__ = __webpack_require__("./src/app/pages/dashboard/weather/weather.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__solar_solar_component__ = __webpack_require__("./src/app/pages/dashboard/solar/solar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__rooms_player_player_component__ = __webpack_require__("./src/app/pages/dashboard/rooms/player/player.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__traffic_traffic_component__ = __webpack_require__("./src/app/pages/dashboard/traffic/traffic.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__traffic_traffic_chart_component__ = __webpack_require__("./src/app/pages/dashboard/traffic/traffic-chart.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -195,33 +196,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var DashboardModule = /** @class */ (function () {
     function DashboardModule() {
     }
     DashboardModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
             imports: [
-                __WEBPACK_IMPORTED_MODULE_2__theme_theme_module__["a" /* ThemeModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ngx_echarts__["a" /* NgxEchartsModule */],
+                __WEBPACK_IMPORTED_MODULE_3__theme_theme_module__["a" /* ThemeModule */],
+                __WEBPACK_IMPORTED_MODULE_2_ngx_echarts__["a" /* NgxEchartsModule */],
             ],
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__dashboard_component__["a" /* DashboardComponent */],
-                __WEBPACK_IMPORTED_MODULE_4__status_card_status_card_component__["a" /* StatusCardComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__temperature_temperature_dragger_temperature_dragger_component__["a" /* TemperatureDraggerComponent */],
-                __WEBPACK_IMPORTED_MODULE_5__contacts_contacts_component__["a" /* ContactsComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__rooms_room_selector_room_selector_component__["a" /* RoomSelectorComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__temperature_temperature_component__["a" /* TemperatureComponent */],
-                __WEBPACK_IMPORTED_MODULE_6__rooms_rooms_component__["a" /* RoomsComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__team_team_component__["a" /* TeamComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__kitten_kitten_component__["a" /* KittenComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__security_cameras_security_cameras_component__["a" /* SecurityCamerasComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__electricity_electricity_component__["a" /* ElectricityComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__electricity_electricity_chart_electricity_chart_component__["a" /* ElectricityChartComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__weather_weather_component__["a" /* WeatherComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__rooms_player_player_component__["a" /* PlayerComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__solar_solar_component__["a" /* SolarComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__traffic_traffic_component__["a" /* TrafficComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__traffic_traffic_chart_component__["a" /* TrafficChartComponent */],
+                __WEBPACK_IMPORTED_MODULE_4__dashboard_component__["a" /* DashboardComponent */],
+                __WEBPACK_IMPORTED_MODULE_5__status_card_status_card_component__["a" /* StatusCardComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__temperature_temperature_dragger_temperature_dragger_component__["a" /* TemperatureDraggerComponent */],
+                __WEBPACK_IMPORTED_MODULE_6__contacts_contacts_component__["a" /* ContactsComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__rooms_room_selector_room_selector_component__["a" /* RoomSelectorComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__temperature_temperature_component__["a" /* TemperatureComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__rooms_rooms_component__["a" /* RoomsComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__team_team_component__["a" /* TeamComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__kitten_kitten_component__["a" /* KittenComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__security_cameras_security_cameras_component__["a" /* SecurityCamerasComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__electricity_electricity_component__["a" /* ElectricityComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__electricity_electricity_chart_electricity_chart_component__["a" /* ElectricityChartComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__weather_weather_component__["a" /* WeatherComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__rooms_player_player_component__["a" /* PlayerComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__solar_solar_component__["a" /* SolarComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__traffic_traffic_component__["a" /* TrafficComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__traffic_traffic_chart_component__["a" /* TrafficChartComponent */],
+                __WEBPACK_IMPORTED_MODULE_0__charts_echarts_echarts_pie_component__["a" /* EchartsPieComponent */]
             ],
         })
     ], DashboardModule);
@@ -1995,53 +1998,18 @@ var MENU_ITEMS = [
                 link: '/pages/tables/table-tour-operators',
             },
         ],
-    },
+    }
+    /*,
     {
-        title: 'Multiple Chanel',
-        icon: 'nb-gear',
-        children: [
-            {
-                title: 'Manage Chanels',
-                link: '/pages/forms/multiple-chanel',
-            }
-        ],
-    },
-    {
-        title: 'Booking Statistics',
-        icon: 'nb-location',
-        children: [
-            {
-                title: 'Manage Bookings',
-                link: '/pages/tables/table-tour-bookings',
-            }
-        ],
-    },
-    {
-        title: 'User Management',
-        icon: 'nb-locked',
-        children: [
-            {
-                title: 'Manage Users',
-                link: '/pages/tables/table-users',
-            },
-            {
-                title: 'Login',
-                link: '/auth/login',
-            },
-            {
-                title: 'Register',
-                link: '/auth/register',
-            },
-            {
-                title: 'Request Password',
-                link: '/auth/request-password',
-            },
-            {
-                title: 'Reset Password',
-                link: '/auth/reset-password',
-            },
-        ],
-    },
+      title: 'Booking Statistics',
+      icon: 'nb-location',
+      children: [
+        {
+          title: 'Manage Bookings',
+          link: '/pages/tables/table-tour-bookings',
+        }
+      ],
+    }*/ ,
     {
         title: 'TOUR OPERATOR ACCOUNT',
         group: true,
@@ -2061,73 +2029,112 @@ var MENU_ITEMS = [
         ],
     },
     {
-        title: 'Support',
-        icon: 'nb-bar-chart',
+        title: 'Multiple Chanel',
+        icon: 'nb-gear',
         children: [
             {
-                title: 'Echarts',
-                link: '/pages/charts/echarts',
-            },
-            {
-                title: 'Charts.js',
-                link: '/pages/charts/chartjs',
-            },
-            {
-                title: 'D3',
-                link: '/pages/charts/d3',
-            },
-        ],
-    },
-    {
-        title: 'UI Components',
-        icon: 'nb-locked',
-        children: [
-            {
-                title: 'Forms',
-                link: '/pages/forms/inputs',
-            },
-            {
-                title: 'Buttons',
-                link: '/pages/ui-features/buttons',
-            },
-            {
-                title: 'Grid',
-                link: '/pages/ui-features/grid',
-            },
-            {
-                title: 'Icons',
-                link: '/pages/ui-features/icons',
-            },
-            {
-                title: 'Modals',
-                link: '/pages/ui-features/modals',
-            },
-            {
-                title: 'Popovers',
-                link: '/pages/ui-features/popovers',
-            },
-            {
-                title: 'Animated Searches',
-                link: '/pages/ui-features/search-fields',
-            },
-            {
-                title: 'Tabs',
-                link: '/pages/ui-features/tabs/tab1',
-            },
-            {
-                title: 'Layout Forms',
-                link: '/pages/forms/layouts',
-            },
-            {
-                title: 'Form Inputs',
-                link: '/pages/forms/inputs',
-            },
-            {
-                title: 'Notifications',
-                link: 'pages/components/notifications'
+                title: 'Manage Channels',
+                link: '/pages/forms/multiple-chanel',
             }
         ],
     },
+    {
+        title: 'Tour Guides',
+        icon: 'nb-locked',
+        children: [
+            {
+                title: 'Manage Tour Guides',
+                link: '/pages/tables/table-users',
+            } /*,
+            {
+              title: 'Login',
+              link: '/auth/login',
+            },
+            {
+              title: 'Register',
+              link: '/auth/register',
+            },
+            {
+              title: 'Request Password',
+              link: '/auth/request-password',
+            },
+            {
+              title: 'Reset Password',
+              link: '/auth/reset-password',
+            }*/,
+        ],
+    }
+    /*,
+    {
+      title: 'Support',
+      icon: 'nb-bar-chart',
+      children: [
+        {
+          title: 'Echarts',
+          link: '/pages/charts/echarts',
+        },
+        {
+          title: 'Charts.js',
+          link: '/pages/charts/chartjs',
+        },
+        {
+          title: 'D3',
+          link: '/pages/charts/d3',
+        },
+      ],
+    }
+    ,
+    {
+      title: 'UI Components',
+      icon: 'nb-locked',
+      children: [
+        {
+          title: 'Forms',
+          link: '/pages/forms/inputs',
+        },
+        {
+          title: 'Buttons',
+          link: '/pages/ui-features/buttons',
+        },
+        {
+          title: 'Grid',
+          link: '/pages/ui-features/grid',
+        },
+        {
+          title: 'Icons',
+          link: '/pages/ui-features/icons',
+        },
+        {
+          title: 'Modals',
+          link: '/pages/ui-features/modals',
+        },
+        {
+          title: 'Popovers',
+          link: '/pages/ui-features/popovers',
+        },
+        {
+          title: 'Animated Searches',
+          link: '/pages/ui-features/search-fields',
+        },
+        {
+          title: 'Tabs',
+          link: '/pages/ui-features/tabs/tab1',
+        },
+        {
+          title: 'Layout Forms',
+          link: '/pages/forms/layouts',
+  
+        },
+        {
+          title: 'Form Inputs',
+          link: '/pages/forms/inputs',
+        },
+        {
+          title:'Notifications',
+          link:'pages/components/notifications'
+        }
+      ],
+    },*/
 ];
 
 

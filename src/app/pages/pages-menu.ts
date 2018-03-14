@@ -19,17 +19,8 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/tables/table-tour-operators',
       },
     ],
-  },
-  {
-    title: 'Multiple Chanel',
-    icon: 'nb-gear',
-    children: [
-      {
-        title: 'Manage Chanels',
-        link: '/pages/forms/multiple-chanel',
-      }
-    ],
-  },
+  }
+  /*,
   {
     title: 'Booking Statistics',
     icon: 'nb-location',
@@ -39,33 +30,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/tables/table-tour-bookings',
       }
     ],
-  },
-  {
-    title: 'User Management',
-    icon: 'nb-locked',
-    children: [
-      {
-        title: 'Manage Users',
-        link: '/pages/tables/table-users',
-      },
-      {
-        title: 'Login',
-        link: '/auth/login',
-      },
-      {
-        title: 'Register',
-        link: '/auth/register',
-      },
-      {
-        title: 'Request Password',
-        link: '/auth/request-password',
-      },
-      {
-        title: 'Reset Password',
-        link: '/auth/reset-password',
-      },
-    ],
-  },
+  }*/,
   {
     title: 'TOUR OPERATOR ACCOUNT',
     group: true,
@@ -85,6 +50,43 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ],
   },
   {
+    title: 'Multiple Chanel',
+    icon: 'nb-gear',
+    children: [
+      {
+        title: 'Manage Channels',
+        link: '/pages/forms/multiple-chanel',
+      }
+    ],
+  },
+  {
+    title: 'Tour Guides',
+    icon: 'nb-locked',
+    children: [
+      {
+        title: 'Manage Tour Guides',
+        link: '/pages/tables/table-users',
+      }/*,
+      {
+        title: 'Login',
+        link: '/auth/login',
+      },
+      {
+        title: 'Register',
+        link: '/auth/register',
+      },
+      {
+        title: 'Request Password',
+        link: '/auth/request-password',
+      },
+      {
+        title: 'Reset Password',
+        link: '/auth/reset-password',
+      }*/,
+    ],
+  }
+  /*,
+  {
     title: 'Support',
     icon: 'nb-bar-chart',
     children: [
@@ -101,7 +103,8 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/charts/d3',
       },
     ],
-  },
+  }
+  ,
   {
     title: 'UI Components',
     icon: 'nb-locked',
@@ -152,5 +155,5 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link:'pages/components/notifications'
       }
     ],
-  },
+  },*/
 ];

@@ -1003,6 +1003,105 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./src/app/pages/charts/echarts/echarts-pie.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EchartsPieComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__nebular_theme__ = __webpack_require__("./node_modules/@nebular/theme/index.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var EchartsPieComponent = /** @class */ (function () {
+    function EchartsPieComponent(theme) {
+        this.theme = theme;
+        this.options = {};
+    }
+    EchartsPieComponent.prototype.ngAfterViewInit = function () {
+        var _this = this;
+        this.themeSubscription = this.theme.getJsTheme().subscribe(function (config) {
+            var colors = config.variables;
+            var echarts = config.variables.echarts;
+            _this.options = {
+                backgroundColor: echarts.bg,
+                color: [colors.warningLight, colors.infoLight, colors.dangerLight, colors.successLight, colors.primaryLight],
+                tooltip: {
+                    trigger: 'item',
+                    formatter: '{a} <br/>{b} : {c} ({d}%)',
+                },
+                legend: {
+                    orient: 'vertical',
+                    left: 'left',
+                    data: ['Expedia', 'Get Your Guide', 'Tripadvisor', 'City Discover', 'Viator'],
+                    textStyle: {
+                        color: echarts.textColor,
+                    },
+                },
+                series: [
+                    {
+                        name: 'Channels',
+                        type: 'pie',
+                        radius: '80%',
+                        center: ['50%', '50%'],
+                        data: [
+                            { value: 335, name: 'Viator' },
+                            { value: 310, name: 'City Discover' },
+                            { value: 234, name: 'Tripadvisor' },
+                            { value: 135, name: 'Get Your Guide' },
+                            { value: 1548, name: 'Expedia' },
+                        ],
+                        itemStyle: {
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: echarts.itemHoverShadowColor,
+                            },
+                        },
+                        label: {
+                            normal: {
+                                textStyle: {
+                                    color: echarts.textColor,
+                                },
+                            },
+                        },
+                        labelLine: {
+                            normal: {
+                                lineStyle: {
+                                    color: echarts.axisLineColor,
+                                },
+                            },
+                        },
+                    },
+                ],
+            };
+        });
+    };
+    EchartsPieComponent.prototype.ngOnDestroy = function () {
+        this.themeSubscription.unsubscribe();
+    };
+    EchartsPieComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'ngx-echarts-pie',
+            template: "\n    <div echarts [options]=\"options\" class=\"echart\"></div>\n  ",
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__nebular_theme__["q" /* NbThemeService */]])
+    ], EchartsPieComponent);
+    return EchartsPieComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/pages/ui-features/modals/modal/modal.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 

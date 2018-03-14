@@ -1,3 +1,4 @@
+import { EchartsPieComponent } from './../charts/echarts/echarts-pie.component';
 
 import { NgModule } from '@angular/core';
 
@@ -23,6 +24,7 @@ import { TrafficComponent } from './traffic/traffic.component';
 import { TrafficChartComponent } from './traffic/traffic-chart.component';
 
 
+
 @NgModule({
   imports: [
     ThemeModule,
@@ -46,6 +48,7 @@ import { TrafficChartComponent } from './traffic/traffic-chart.component';
     SolarComponent,
     TrafficComponent,
     TrafficChartComponent,
+    EchartsPieComponent
 
   ],
 })
